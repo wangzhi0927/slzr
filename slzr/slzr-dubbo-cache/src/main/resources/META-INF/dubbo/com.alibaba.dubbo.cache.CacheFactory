@@ -1,0 +1,3 @@
+redis=com.slzr.dubbo.cache.redis.RedisCacheFactory
+ehcache=com.slzr.dubbo.cache.ehcache.EhCacheFactory
+mixcache=com.slzr.dubbo.cache.mixcache.MixCacheFactory

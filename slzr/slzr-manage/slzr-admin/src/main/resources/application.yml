@@ -1,0 +1,50 @@
+server:
+  port: 9994
+  context-path: /
+  tomcat:
+    uri-encoding: utf-8
+spring:
+  thymeleaf:
+    mode: LEGACYHTML5
+    cache: false
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  profiles: 
+    active: dev
+  http:
+    multipart:
+      max-file-size: 30Mb
+      max-request-size: 30Mb
+  devtools:
+    restart:
+      enabled: true
+  dubbo:
+    application:
+      name: shopAdmin
+    registry:
+      address: zookeeper://111.210.108.61
+    scan: com.zscat
+mybatis: 
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: mybatis/**/*Mapper.xml
+  typeAliasesPackage: com.zscat.*.domain
+
+wechat:
+  miniapp:
+    appid: wx15d4269d3210863d
+    secret: d60d341206e2d07f8c4c2bb29580b0c6
+    token: weixin
+    aesKey: 111
+    msgDataFormat: JSON
+
+
+
+
+
+qiniu:
+  accessKey: AMJ_CEvgX1eUYtSwC1ioo_WnmR73ufqYYmwrrPDV
+  secretKey: 1iUDYRKdibiVP-WZLrGoErtdWWCqYWXjKUbQtAYQ
+  bucketName:  j5shop
+  basePath: http://p0bt2oaom.bkt.clouddn.com/
